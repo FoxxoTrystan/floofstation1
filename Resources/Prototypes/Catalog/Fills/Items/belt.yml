@@ -27,6 +27,22 @@
       - id: Multitool
 
 - type: entity
+  id: ClothingBeltUtilityAtmos
+  parent: ClothingBeltUtility
+  suffix: Engineering
+  components:
+  - type: StorageFill
+    contents:
+      - id: Crowbar
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
+      - id: GasAnalyzer
+      - id: HolofanProjector
+
+- type: entity
   id: ClothingBeltChiefEngineerFilled
   parent: ClothingBeltChiefEngineer
   suffix: Filled
@@ -84,6 +100,24 @@
       - id: EmergencyMedipen #You never know what people are going to latejoin into
 
 - type: entity
+  id: ClothingBeltMedicalAdvancedFilled
+  parent: ClothingBeltMedical
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedicatedSuture
+        amount: 2
+      - id: RegenerativeMesh
+        amount: 1
+      - id: Bloodpack
+        amount: 1
+      - id: Gauze
+      - id: EmergencyMedipen
+      - id: BruteAutoInjector
+      - id: BurnAutoInjector
+
+- type: entity
   id: ClothingBeltMedicalEMTFilled
   parent: ClothingBeltMedicalEMT
   suffix: Paramedic,Filled
@@ -106,7 +140,12 @@
     contents:
     - id: HydroponicsToolMiniHoe
     - id: HydroponicsToolSpade
+    - id: HydroponicsToolClippers #floof
+    - id: HydroponicsToolHatchet #floof
     - id: RobustHarvestChemistryBottle
+    - id: EZNutrientChemistryBottle #floof
+    - id: PlantBGoneSpray #floof
+
 
 - type: entity
   id: ClothingBeltSheathFilled

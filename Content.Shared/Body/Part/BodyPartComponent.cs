@@ -117,7 +117,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     /// How much health to heal on the body part per tick.
     /// </summary>
     [DataField]
-    public float SelfHealingAmount = 5;
+    public float SelfHealingAmount = 0.5f; // Floof - reduced from 5 due to body part damage nerf. Was 10/min, now 1/min.
 
     /// <summary>
     /// The name of the container for this body part. Used in insertion surgeries.
@@ -142,7 +142,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     /// to make possible severing it.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SeverIntegrity = 90;
+    public float SeverIntegrity = 300; // Floof - increased to 300 due to frequent RR
 
     /// <summary>
     /// The ID of the base layer for this body part.
@@ -159,8 +159,8 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     [DataField, AutoNetworkedField]
     public Dictionary<TargetIntegrity, float> IntegrityThresholds = new()
     {
-        { TargetIntegrity.CriticallyWounded, 90 },
-        { TargetIntegrity.HeavilyWounded, 75 },
+        { TargetIntegrity.CriticallyWounded, 100 }, // Floof - Increased from 90
+        { TargetIntegrity.HeavilyWounded, 70 }, // Floof note: this is where "passive healing" stops
         { TargetIntegrity.ModeratelyWounded, 60 },
         { TargetIntegrity.SomewhatWounded, 40},
         { TargetIntegrity.LightlyWounded, 20 },
